@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>شركة التأمين العراقية العامة - منصة خدمات</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#0b4c75">
+<link rel="icon" href="assets/icon-192.png" type="image/png">
+</head>
+<body>
+<header>
+  <img src="assets/logo-ui.png" alt="شعار الشركة">
+  <div>
+    <h1>شركة التأمين العراقية العامة</h1>
+    <nav>
+      <a href="./">الرئيسية</a>
+      <a href="services.html">وثائق وخدمات</a>
+      <a href="calculator.html">حاسبة القسط</a>
+      <a href="branches.html">فروعنا</a>
+      <a href="claims.html">مطالبة/تعويض</a>
+      <a href="contact.html">تواصل</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+
+<div class="card">
+  <h2>أهلاً بك</h2>
+  <p>هذه منصة إلكترونية قابلة للتثبيت كتطبيق (PWA) بدون متاجر. افتحها من المتصفح ثم اختر <strong>إضافة إلى الشاشة الرئيسية</strong>.</p>
+  <a id="installBtn" class="btn" style="display:none">تثبيت التطبيق</a>
+  <a class="btn ghost" href="#" onclick="share()">مشاركة الرابط</a>
+</div>
+<div class="grid">
+  <div class="card"><h3>وثائق وخدمات</h3><p>اذهب إلى صفحة الخدمات للاطلاع على الوثائق وطلب عرض سعر أو إصدار أولي.</p><a class="btn" href="services.html">فتح الخدمات</a></div>
+  <div class="card"><h3>حاسبة القسط</h3><p>حاسبة استرشادية لقسط وثيقة السيارات (مع/بدون إرهاب).</p><a class="btn" href="calculator.html">فتح الحاسبة</a></div>
+  <div class="card"><h3>فروعنا</h3><p>عناوين وأرقام تواصل وروابط خرائط Google.</p><a class="btn" href="branches.html">عرض الفروع</a></div>
+  <div class="card"><h3>مطالبة/تعويض</h3><p>خطوات تقديم المطالبة ونماذج التحميل.</p><a class="btn" href="claims.html">تعليمات المطالبة</a></div>
+  <div class="card"><h3>تواصل معنا</h3><p>هواتف وبريد إلكتروني وقنوات رسمية.</p><a class="btn" href="contact.html">تفاصيل التواصل</a></div>
+</div>
+<script>
+let deferredPrompt; const btn=document.getElementById('installBtn');
+window.addEventListener('beforeinstallprompt',(e)=>{{e.preventDefault();deferredPrompt=e;btn.style.display='inline-block';}});
+btn?.addEventListener('click',async()=>{{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;btn.style.display='none';}});
+async function share(){{if(navigator.share){{await navigator.share({{title:'منصة التأمين العراقية',url:location.href}})}} else alert('انسخ الرابط من شريط العنوان وشاركه.');}}
+</script>
+
+</div>
+<footer>© شركة التأمين العراقية العامة — نسخة تجريبية مجانية</footer>
+<script>
+if ('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js'));}
+</script>
+</body>
+</html>

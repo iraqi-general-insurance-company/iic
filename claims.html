@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>المطالبة والتعويض</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#0b4c75">
+<link rel="icon" href="assets/icon-192.png" type="image/png">
+</head>
+<body>
+<header>
+  <img src="assets/logo-ui.png" alt="شعار الشركة">
+  <div>
+    <h1>شركة التأمين العراقية العامة</h1>
+    <nav>
+      <a href="./">الرئيسية</a>
+      <a href="services.html">وثائق وخدمات</a>
+      <a href="calculator.html">حاسبة القسط</a>
+      <a href="branches.html">فروعنا</a>
+      <a href="claims.html">مطالبة/تعويض</a>
+      <a href="contact.html">تواصل</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+
+<div class="card">
+  <h2>تقديم مطالبة / تعويض</h2>
+  <ol>
+    <li>إبلاغ أقرب فرع خلال 48 ساعة من وقوع الحادث.</li>
+    <li>تجهيز المستمسكات المطلوبة حسب نوع الوثيقة (محضر شرطة/تقرير طبي/صور…)</li>
+    <li>تعبئة نموذج المطالبة وإرفاق المستمسكات.</li>
+    <li>متابعة المعاملة عبر الفرع أو قنوات التواصل.</li>
+  </ol>
+  <div class="note">
+    حمّل نموذج المطالبة: 
+    <a href="assets/claim-form.pdf" download>claim-form.pdf</a> (ضع الملف لاحقاً داخل مجلد assets).
+  </div>
+  <p>الإرسال الإلكتروني (تجريبي): <a href="mailto:claims@example.com?subject=مطالبة%20تأمينية">claims@example.com</a></p>
+</div>
+
+</div>
+<footer>© شركة التأمين العراقية العامة — نسخة تجريبية مجانية</footer>
+<script>
+if ('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js'));}
+</script>
+</body>
+</html>
