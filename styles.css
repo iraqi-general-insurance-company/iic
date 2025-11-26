@@ -27,6 +27,4 @@ footer{text-align:center;color:#456;padding:28px;line-height:1.6}
 .small{font-size:12px;color:#667}
 .arrow-steps{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
 .arrow-steps span{background:#fff;border:1px solid #e0e6ef;border-radius:999px;padding:4px 10px;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-ul.clean{margin:0 0 8px 0;padding:0 1rem 0 0}
-ul.clean li{margin:4px 0}
 .badge{display:inline-block;background:#0b4c75;color:#fff;border-radius:999px;padding:2px 8px;font-size:12px;margin-left:6px}

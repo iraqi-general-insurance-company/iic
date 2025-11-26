@@ -4,7 +4,7 @@ let deferredPrompt=null;
 window.addEventListener('beforeinstallprompt',(e)=>{ e.preventDefault(); deferredPrompt=e; const b=document.getElementById('installBtn'); if(b){ b.innerText='تثبيت التطبيق'; b.dataset.ready='1'; } });
 function triggerInstall(){ if (deferredPrompt){ deferredPrompt.prompt(); deferredPrompt.userChoice.finally(()=>{ deferredPrompt=null; }); } else { alert('من فضلك استخدم خيار «إضافة إلى الشاشة الرئيسية» من قائمة المتصفح.'); } }
 
-// حاسبة القسط
+// Calculator logic
 const RATES = {
   "خصوصي_4": {risk: 2.975, liability: 0.525, terror: 1.2},
   "خصوصي_6": {risk: 3.1875, liability: 0.5625, terror: 1.4},
